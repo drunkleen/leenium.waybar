@@ -1,0 +1,155 @@
+@define-color black #020405;
+@define-color background #0b1113;
+@define-color sidebar #0e1518;
+@define-color panel #11191c;
+@define-color card #141e21;
+@define-color popup #182326;
+@define-color floating #1d2a2d;
+@define-color hover #223033;
+@define-color active #304144;
+@define-color selection #365156;
+@define-color text #d8e3e0;
+@define-color foreground #d8e3e0;
+@define-color muted #718688;
+@define-color cyan #59d6c5;
+@define-color teal #33b8a8;
+@define-color emerald #4dba7a;
+@define-color blue #5e9bff;
+@define-color yellow #d9c76b;
+@define-color orange #f4a259;
+@define-color red #e16f73;
+
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 12px;
+}
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+window#waybar {
+  background-color: alpha(@sidebar, 0.96);
+  color: @text;
+  border-radius: 12px;
+  border: 2px solid alpha(@cyan, 0.25);
+}
+
+window#waybar.hidden {
+  opacity: 0.92;
+}
+
+#waybar {
+  padding: 0px 0px;
+}
+
+#cpu,
+#battery,
+#pulseaudio,
+#custom-power,
+#custom-launcher {
+  min-width: 12px;
+  margin: 0 7.5px;
+}
+
+#tray {
+  margin-right: 16px;
+}
+
+#bluetooth {
+  margin-right: 17px;
+}
+
+#network {
+  margin-right: 13px;
+}
+
+#custom-expand-icon {
+  margin-right: 18px;
+}
+
+#workspaces {
+  padding: 4px 8px;
+}
+
+#workspaces button:hover {
+  background-color: @hover;
+  color: @text;
+}
+
+#workspaces button.active {
+  background-color: @active;
+  color: @text;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+  color: @black;
+}
+
+#clock {
+  margin-left: 8.75px;
+}
+
+#network.disconnected,
+#pulseaudio.muted {
+  color: @yellow;
+}
+
+#battery.warning {
+  color: @yellow;
+}
+
+#battery.critical {
+  color: @red;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  background-color: @selection;
+}
+
+tooltip {
+  background-color: @popup;
+  border: 1px solid @hover;
+  border-radius: 16px;
+}
+
+tooltip label {
+  color: @text;
+  padding: 8px 10px;
+}
+
+#custom-launcher:hover,
+#custom-power:hover,
+#clock:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#bluetooth:hover,
+#backlight:hover,
+#idle_inhibitor:hover,
+#custom-media:hover {
+  background-color: @hover;
+}
