@@ -8,7 +8,7 @@
 
 Hosted under `github.com/drunkleen/leenium.waybar`.
 
-
+<img src="./assets/preview.png" width="100%" />
 
 </div>
 
